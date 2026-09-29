@@ -1,67 +1,120 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>HAN-RA Editorial — Un viaje hacia Corea</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HAN · Una argentina con alma y corazón coreano. Poemario bilingüe de Silvana A. Monelli, Editorial HAN-RA.">
+<title>HAN · Silvana Monelli</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Gowun+Batang:wght@400;700&family=Jost:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<div id="petal-layer"></div>
-<div id="spark-layer"></div>
+<canvas id="petals" aria-hidden="true"></canvas>
 
-<section class="hero">
-  <img class="bg-blossom" id="bgBlossom" src="assets/bg-blossom.png" alt="">
-  <div class="logo-wrap"><img src="imagenes/logo.png" alt="HAN-RA Editorial"></div>
-
-  <div class="book-stage" id="bookStage">
-    <div class="book-shadow" id="bookShadow"></div>
-    <div class="book" id="book">
-      <div class="face front"><img src="imagenes/1.png" alt="Mi primer paso al coreano"></div>
-      <div class="face spine"></div>
-      <div class="face back"></div>
+<header class="hero">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <div class="brand">HAN<span>·</span>RA &nbsp;EDITORIAL</div>
+      <a class="cta-sm" href="#experiencia">Descubrir el libro</a>
+    </nav>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="label">Poesía · Música · Sin barreras</span>
+        <h1><span class="gold-text">HAN</span>
+        <p class="subtitle">Una argentina con alma<br>y corazón coreano</p>
+        
+        <div class="author">Silvana A. Monelli </div>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#experiencia">Comenzar el viaje</a>
+        </div>
+      </div>
+      <div class="book">
+        <div class="book-inner">
+          <img src="portada.webp" alt="Portada del libro HAN, de Silvana Monelli: montañas nevadas, cerezos en flor y la torre Namsan bajo un cielo estrellado violeta.">
+        </div>
+        <div class="book-glow"></div>
+      </div>
     </div>
   </div>
-  <div class="scroll-cue">DESLIZÁ PARA DESCUBRIR</div>
+</header>
 
-  <svg class="waves" viewBox="0 0 1440 180" preserveAspectRatio="none">
-    <path d="M0,90 C300,180 500,20 800,90 C1050,150 1250,60 1440,110 L1440,180 L0,180 Z" fill="#F8D7E5" opacity="0.55"/>
-    <path d="M0,120 C260,60 520,170 800,120 C1080,70 1250,150 1440,100 L1440,180 L0,180 Z" fill="#E7C96D" opacity="0.4"/>
-  </svg>
-</section>
-
-<section class="story">
-
-  <p class="reveal-line">Este libro guarda una experiencia creada para despertar los sentidos y acercarte a la esencia de Corea del Sur.</p>
-  <p class="reveal-line">Al abrirlo descubrirás un recorrido donde poesía, cultura y tradición se unen para tender un puente eterno entre dos culturas.</p>
-  <p class="reveal-line">Una esencia inspirada en el alma argentina y el corazón coreano, detalles cuidadosamente seleccionados y poemas profundos te acompañarán en el descubrimiento de sus lazos, raíces y emociones.</p>
-  <p class="reveal-line">Escaneá el código QR para complementar esta experiencia con contenidos que abrazan el alma.</p>
-  <p class="reveal-line" style="font-family:'Cinzel',serif;font-style:normal;font-size:1.05rem;letter-spacing:.06em;color:var(--gold)">Tu viaje hacia HAN comienza aqui.</p>
-</section>
-
-<div class="audio-block">
-  <span>ESCUCHÁ EL MENSAJE</span>
-  <audio id="audioPlayer" controls src="audio/audiomami.MP3"></audio>
-</div>
-
-
+<main>
+  <section class="invite" id="experiencia">
+    <div class="wrap">
+      <article class="invite-card">
+        <div class="seal" aria-hidden="true">한</div>
+        <span class="label">Poesía para todos los sentidos</span>
+        <h2>El primer libro de poemas pensado para que <em>cada verso pueda escucharse</em>.</h2>
+        <p class="lead">Cada texto de HAN puede escucharse en formato canción a través de un código QR, para integrar a lectores con discapacidad visual. Silvana A. Monelli busca que la poesía —y la música que la acompaña— llegue a más personas, sin barreras.</p>
+        <p class="lead">En estas páginas, una argentina con alma y corazón coreano comparte versos que abrazan, celebran el amor y florecen como una primavera íntima.</p>
+        <div class="ornament" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.2 2.6 1.2 4.9 0 7-1.2-2.1-1.2-4.4 0-7Zm0 13c1.2 2.1 1.2 4.4 0 7-1.2-2.6-1.2-4.9 0-7ZM2 12c2.6-1.2 4.9-1.2 7 0-2.1 1.2-4.4 1.2-7 0Zm13 0c2.1-1.2 4.4-1.2 7 0-2.6 1.2-4.9 1.2-7 0Z"/><circle cx="12" cy="12" r="1.6"/></svg>
+        </div>
+        <p class="closing">Una invitación a disfrutar y saborear cada poema.</p>
+      </article>
     </div>
-    <div class="mist" style="left:6px"></div>
-    <div class="mist" style="left:30px;animation-delay:.6s"></div>
-    <div class="mist" style="left:-14px;animation-delay:1.2s"></div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="divider"></div>
-  <p>감사합니다 · Gracias </p>
-  <img src="imagenes/logo.png" alt="HAN-RA Editorial">
+  <section class="details" aria-labelledby="t-det">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Dentro del libro</span>
+        <h2 id="t-det">Poesía que se lee, se escucha y se comparte</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+          <h3>Poemas hechos canción</h3>
+          <p>Cada texto puede escucharse en formato canción mediante un código QR, para que la poesía llegue también a lectores con discapacidad visual.</p>
+          
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c3-6 7-9 10-9s7 3 10 9"/><path d="M2 18h20"/><path d="M6 18v-3M18 18v-3M12 18V9"/></svg>
+          <h3>Un puente entre dos países</h3>
+          <p>Un homenaje bilingüe, en español y coreano, que honra a Argentina y a Corea del Sur desde la sensibilidad poética.</p>
+        
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><path d="M12 9.8c-1.6-3-1-5.6 0-7.3 1 1.7 1.6 4.3 0 7.3ZM14.1 11.3c2.7-2.1 5.4-2.1 7.3-1.5-1.3 1.5-3.8 2.8-7.3 1.5ZM13.3 14c1.1 3.2.1 5.7-1.2 7.1-.6-1.9-.3-4.8 1.2-7.1ZM10.7 14c-1.5 2.3-1.8 5.2-1.2 7.1C8.2 19.7 9.6 17.2 10.7 14ZM9.9 11.3c-3.5 1.3-6 0-7.3-1.5 1.9-.6 4.6-.6 7.3 1.5Z"/></svg>
+          <h3>Versos que florecen</h3>
+          <p>Poemas que abrazan, celebran el amor y florecen como una primavera íntima, bajo cerezos y cielos estrellados.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="author-sec" aria-labelledby="t-autora">
+    <div class="wrap author-grid">
+      <figure class="back-cover">
+        <img src="contratapa.webp" alt="Contratapa del libro HAN con el texto de presentación en español y coreano.">
+      </figure>
+      <div class="author-copy">
+        <span class="label">La autora</span>
+        <h2 id="t-autora">Silvana A. Monelli</h2>
+        
+        <p>Una argentina con alma y corazón coreano. En <em>HAN</em> comparte versos que nacen de su amor por Corea del Sur y de su deseo de tender puentes entre Argentina y Corea, honrando ambas culturas desde la sensibilidad poética.</p>
+        <blockquote>
+          Desde Córdoba, Argentina… para el mundo.
+          
+        </blockquote>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">HAN<span>·</span>RA &nbsp;EDITORIAL</div>
+    <div>HAN · 한 &nbsp;—&nbsp; Silvana A. Monelli</div>
+    <div>Córdoba, Argentina</div>
+  </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
